@@ -106,11 +106,11 @@ body{
         }
         p{
           font-family: var(--font-display-6);
-          font-size: 2.5rem;
-          line-height: 3rem;
+          font-size: 2.3rem;
+          line-height: 3.4rem;
           max-width: 75rem;
           text-align:center;
-          margin: 0 auto;
+          margin: 1rem auto;
           padding-bottom:4rem;
           @include respond (tab-land){
             font-size:1.8rem;
