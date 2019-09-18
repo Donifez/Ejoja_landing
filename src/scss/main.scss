@@ -1,0 +1,643 @@
+@import './abstracts/mixins';
+@import './abstracts/variables';
+html{
+  font-size:62.5%;
+}
+body{
+  background:black;
+  color:white;
+  padding:0;
+  margin:0;
+  
+  max-width:100%;
+  font-family:var (--font-display-6);
+  .landing-wrapper{
+    width: 100%;
+    margin:0 auto;
+   
+
+    nav{
+      display:grid;
+      grid-template-columns: 5fr 1fr;
+      width:90%;
+      margin:3.2rem auto 0 auto;
+      @include respond (tab-land){
+        //
+      }
+        .logo{
+          height:5rem;
+          img{
+            height:100%;
+          }
+        }
+      ul{
+        padding:0;
+        margin:0;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+      
+        li{
+          list-style: none;
+          text-align:center;
+          display:flex;
+          flex-direction: column;
+          align-items: center;
+          align-content: center;
+          justify-content: center;
+        }
+        .login-btn{
+          padding:1.3rem 3rem;
+          border: 1px solid #54DFC5;
+          box-sizing: border-box;
+          border-radius: 2px;
+          flex-direction: column;
+          align-items: center;
+          align-content: center;
+          justify-content: center;
+          text-align:center;
+          display:flex;
+          cursor:pointer;
+          font-family:var (--font-display-6);
+          letter-spacing: 0.02em;
+          text-transform:uppercase;
+          font-size: 1.8rem;
+          margin-left:51px;
+          &:hover{
+            background: #54DFC5;
+          }
+        }
+        
+      }
+    }
+
+    .ejoya-hero{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height:80vh;
+      @include respond (tab-land){
+        text-align:center;
+        display:grid;
+        width:90%;
+        grid-template-columns: 1fr;
+        margin:0 auto 2rem auto;
+        
+      }
+        h1{
+          
+         background: -webkit-linear-gradient(328deg, rgba(69,249,229,1) 0%, rgba(255,56,152,1) 34%, rgba(69,249,229,1) 75%, rgba(255,56,152,1) 100%);;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip:text;
+          font-family: var (--font-display-2);
+          font-size: 6rem;
+          text-align:center;
+          letter-spacing: 0.02em;
+          padding:0;
+          margin:0 auto 3rem auto;
+          margin-top:10rem;
+          @include respond (tab-land){
+            font-size:4rem;
+            padding:1rem;
+            line-height:4.6rem;
+            margin-top:1.8rem;
+          }
+        }
+        p{
+          font-family: var(--font-display-6);
+          font-size: 2.5rem;
+          line-height: 3rem;
+          max-width: 75rem;
+          text-align:center;
+          margin: 0 auto;
+          padding-bottom:4rem;
+          @include respond (tab-land){
+            font-size:1.8rem;
+            padding:0 1rem;
+             line-height: 2.5rem;
+            margin:0 auto;
+          }
+
+        }
+        .chevron-down{
+          margin-top:1rem;
+          font-size:6rem;
+          @include respond (tab-land){
+            margin:0 auto;
+            font-size:3rem;
+          }
+          
+        }
+      .cta-btn{
+        border: 1px solid #45F9E5;
+        box-sizing: border-box;
+        border-radius: 0.8rem;
+        background: none;
+        color:white;
+         padding:2rem 4rem;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        text-align: center;
+        cursor: pointer;
+        &:hover{
+          background: #45F9E5;
+          color:black;
+        }
+        @include respond (tab-land){
+        font-size:1.8rem;
+        padding:2rem 1.5rem;
+        width:70%;
+        margin:1rem auto;
+        }
+        @include respond (android-phone){
+          font-size:1.8rem;
+          padding:2rem 0.5rem;
+          margin:1rem auto;
+        }
+      }
+    }
+    .what-we-do{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      position:relative;
+      top:100px;
+      width:90%;
+      margin:0 auto;
+      height:80vh; 
+     
+      @include respond(tab-land){
+        width:90%;
+        position:static;
+        margin:0 auto;
+        display:grid;
+          grid-template-columns: 1fr;
+          // border:1px solid #45F9E5;
+      }
+      img{
+        width:100%;
+      }
+     
+      .svg-container{
+        position: absolute;
+        right:0;
+        img{
+          width:100%;
+          height:100%;
+        }
+        @include respond(tab-land){
+          display:none;
+          // border:1px solid green;
+          
+        }
+      }
+      .content-container{
+        margin:0 auto;
+        margin-left:4rem;
+        @include respond (tab-land){
+          text-align:center;
+          margin-left:0;
+          margin-bottom:10rem;
+        }
+        h2{
+          font-family:var (--font-display-2);
+          font-size: 5rem;
+          @include respond(tab-land){
+            font-size:3rem;
+          }
+        }
+        p{
+          font-family: var (--font-display-6);
+          font-size: 2.2rem;
+          @include respond (tab-land){
+            font-size:1.8rem;
+          }
+        
+        }
+      }
+    }
+    .content-2{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      width:90%;
+      margin:2rem auto;
+      @include respond (tab-land){
+        display:grid;
+        margin:0 auto;
+        grid-template-columns: 1fr;
+        grid-gap:1.5rem;
+        text-align:center;
+        margin-bottom:2rem;
+        
+      img{
+          width:80%;
+          margin:0 auto;
+        }
+      }
+      
+      p{
+        padding-left:2rem;
+        font-family: var (--font-display-6);
+        font-size: 2rem;
+        @include respond(tab-land){
+          font-size:1.8rem;
+          text-align:center;
+          padding:0;
+        }
+       
+      }
+      .padded-paragraph{
+        // max-width: 497px;
+        text-align:right;
+        margin-right:3rem;
+        @include respond(tab-land){
+          font-size:1.8rem;
+          text-align:center;
+          padding:0;
+          margin:0;
+        }
+
+      }
+    }
+    .join{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      position:relative;
+      margin-top:100px;
+      
+
+      @include respond(tab-land){
+        position:static;
+        grid-template-columns:1fr;
+        margin-bottom:4rem;
+        width:90%;
+        margin:4rem auto 6rem auto;
+      }
+      
+      .svg-div{
+        @include respond(tab-land){
+          display:none;
+        }
+      }
+      h2{
+        background: 
+        -webkit-linear-gradient(328deg, rgba(251, 210, 73, 0.744) 0%, rgba(238, 33, 168, 0.6882) 34%, rgba(251, 210, 73, 0.744) 75%, rgba(238, 33, 168, 0.6882) 100%);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        font-size: 3rem;
+        max-width: 65rem;
+        margin-right:6rem;
+        text-align:right;
+        @include respond (tab-land){
+          margin:1rem auto;
+          text-align:center;
+          font-size:1.8rem;
+        }
+        
+      }
+      p{
+        // max-width: 578px;
+        font-size: 1.6rem;
+        
+        text-align: right;
+        margin-right:6rem;
+        @include respond(tab-land){
+          text-align:center;
+          font-size:1.4rem;
+          margin:0 auto;
+        }
+        
+
+      }
+    }
+    .testimonial{
+      display:grid;
+      width:70%;
+      margin: 0 auto;
+      text-align:center;
+      grid-template-columns: 1fr 1fr;
+
+      @include respond(tab-land){
+        margin:3rem auto 0 auto;
+        grid-template-columns:1fr;
+      }
+      
+    }
+    .testimonial-card{
+      max-width: 360px;
+      img{
+        width:100%;
+      }
+      h3{
+        font-size:1.5rem;
+      }
+      p{
+        font-size:1.2rem;
+        line-height:1.3rem;
+      }
+      
+    }
+    .music-stores{
+      width:90%;
+      margin:200px auto 60px auto;
+      display:grid;
+      grid-template-columns:1fr 3fr 1fr;
+      @include respond(tab-land){
+        grid-template-columns: 1fr;
+        margin: auto;
+        width:60%;
+      }
+        .music-store-left{
+          @include respond(tab-land){
+            display:none;
+
+            // border:1px solid green;
+            // justify-contents:center;
+            // align-items:center;
+            // box-sizing:border-box;
+            // padding:0;
+            // margin:0;
+            // padding:1rem;
+          }
+          position:relative;
+          img{
+            width:100px;
+            height:100px;
+          }
+          .spotify-logo{
+            position: absolute;
+            left: 5%;
+            right: 5%;
+            top: 5%;
+            bottom: 5%;
+            &:hover{
+              transform: rotate(-180.79deg);
+              transition: 0.5s;
+            }
+            
+          }
+          .deezer-logo{
+            position: absolute;
+            left: 14.72%;
+            right: 78.84%;
+            height:59px;
+            width:70px;
+            bottom: 23.79%;
+            // background: radial-gradient(50% 50% at 50% 100%, #F7FB49 0%, rgba(44, 26, 250, 0.99) 200.61%, #FA1AD6 201.18%, #2CFA1A 100%);
+            transform: rotate(27.79deg);
+            cursor:pointer;
+            &:hover{
+              transform: rotate(-300.79deg);
+              transition: 0.5s;
+            }
+            
+          }
+          .google-play-music-logo{
+            position: absolute;
+          left: 40%;
+          top:100%;
+          &:hover{
+            transform: rotate(-200.79deg);
+            transition: 0.5s;
+          }
+          
+          }
+          .youtube-logo{
+            position: absolute;
+            left: 60.08%;
+            top: 130.08%;
+            height:150px;
+            width:200px;
+            transform: rotate(-32.9deg);
+            &:hover{
+              transform: rotate(290.79deg);
+              transition: 0.5s;
+            }
+          
+          }
+        }
+        .music-store-mobile{
+          display:none;
+          @include respond(tab-land){
+            display:flex;
+            justify-content:center;
+            margin:1rem auto 1rem auto;
+          }
+          img{
+            width:30px;
+            height:30px;
+            padding:3px;
+            &:hover{
+              transform: rotate(360deg);
+              transition: 0.7s;
+            }
+          }
+          .youtube-logo{
+            width:40px;
+            height:40px;
+            padding:0;
+            // position:static;
+          }
+
+        }
+        .music-store-center{
+          max-width:600px;
+          margin:0 auto;
+          text-align:center;
+          h3{
+            font-size: 32px;
+            line-height: 38px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            @include respond(tab-land){
+              font-size:1.8rem;
+            }
+          }
+          p{
+            font-size: 20px;
+            line-height: 29px;
+            text-align: center;
+            margin-bottom:60px;
+            @include respond(tab-land){
+              font-size:1.2rem;
+              line-height:1.4rem;
+            }
+          }
+          button{
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            box-sizing: border-box;
+            border-radius: 2px;
+            background:none;
+            color:white;
+            padding:12px 50px;
+            cursor:pointer;
+            font-family: Gill Sans MT Pro;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.02em;
+          }
+        }
+        .music-store-right{
+          position:relative;
+          @include respond (tab-land){
+            display:none;
+          }
+          img{
+            width:120px;
+            height:120px;
+          }
+          .spotify-logo{
+            position: absolute;
+            right: 10.69%;
+            top:10px;
+            height:100px;
+            width:100px;
+            &:hover{
+              transform: rotate(-300.79deg);
+              transition: 0.7s;
+            }
+          }
+          .deezer-logo{
+            position: absolute;
+            right: 18.66%;
+            top: 55.22%;
+            bottom: -29.95%;
+            transform: rotate(-30.29deg);
+            &:hover{
+              transform: rotate(-300.79deg);
+              transition: 0.5s;
+            }
+          }
+          .play-logo{
+            position:absolute;
+            top:100%;
+            left: 0.37%;
+            transform: rotate(121.53deg);
+            height:100px;
+            width:100px;
+            &:hover{
+              transform: rotate(-300.79deg);
+              transition: 0.5s;
+            }
+
+          }
+          .youtube-logo{
+            position: absolute;
+            right: 90.08%;
+            top: 100.08%;
+            height:150px;
+            width:200px;
+            transform: rotate(33.42deg);
+            &:hover{
+              transform: rotate(290.79deg);
+              transition: 0.5s;
+            }
+          }
+        }
+    }
+    .newsletter{
+      display:flex;
+      // height: 200px;
+      // width:100%;
+      padding:3rem;
+      background: #303030;
+      margin-top:300px;
+      flex-direction:row;
+      align-items: center;
+      @include respond(tab-land){
+        flex-direction:column;
+      }
+      .newsletter-container{
+        display:flex;
+        margin:0 50px;
+        @include respond(tab-land){
+          margin:0 auto;
+         
+        }
+        @include respond(android-phone){
+          flex-direction:column;
+          align-items:center;
+        }
+        p{
+          font-size: 1.4rem;
+          text-align:center;
+        }
+        input{
+          max-width: 350px;
+          height: 3rem;
+          border: 1px solid #54DFC5;
+          box-sizing: border-box;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 2px;
+          background:none;
+          font-size: 16px;
+          padding-left:20px;
+          @include respond(tab-land){
+            max-width:18rem;
+
+          }
+          @include respond(android-phone){
+            min-width:90%;
+          }
+        }
+        button{
+          max-width: 9rem;
+          height: 3rem;
+          background: #54DFC5;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 2px;
+          border:none;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 0.02em;
+          cursor:pointer;
+          text-transform:uppercase;
+          color: #000000;
+          @include respond(android-phone){
+            min-width:99%;
+            margin-top:0.5rem;
+          }
+        }
+      }
+      
+    }
+    .footer-links{
+        display:flex;
+        flex-flow: row wrap;
+        width:93%;
+        margin: 4rem auto 1.6rem auto;
+        border-bottom:1px solid white;
+        @include respond(tab-land){
+          justify-content:center;
+        }
+
+        li{
+          padding-bottom:16px;
+          font-size: 1.1rem;
+          list-style:none;
+          padding-right:1rem;
+          
+        }
+      }
+      .footer-social{
+        display:flex;
+        flex-flow: row wrap;
+        width:93%;
+        margin:0 auto;
+        margin-bottom:20px;
+        font-size:1.5rem;
+        @include respond(tab-land){
+          justify-content:center;
+        }
+      }
+      .footer-copyright{
+        position:absolute;
+        background: #303030;
+        width:100%;
+        p{
+          padding-left:50px;
+        }
+      }
+  }
+}
