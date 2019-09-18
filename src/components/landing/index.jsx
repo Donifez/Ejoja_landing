@@ -39,16 +39,23 @@ class Landing extends Component {
     </section>
     <div className="content-2">
       <img src="/images/joel-muniz-bJ2Dm9ZyeIY-unsplash.png" alt="" srcset=""/>
+      <div className="content-info">
+      <h3>Partners</h3>
       <p>We are constantly working on strategic parnerships that, ensuring your content is placed in front of millions of users</p>
-    </div>
+      </div>
+   </div>
     <div className="content-2">
-    <p className="padded-paragraph">We are constantly working on strategic parnerships that, ensuring your content is placed in front of millions of users</p>
+    <div className="content-info">
+      <h3>Growth</h3>
+      <p className="padded-paragraph">We are constantly working on strategic parnerships that, ensuring your content is placed in front of millions of users</p>
+    </div>
       <img src="/images/turntable-1109588_1920.png" alt="" srcset=""/>
-      
+   
     </div>
 
     <div className="content-2">
       <img src="/images/5d7929304459f.png" alt="" srcset=""/>
+     
       <p>We go above and beyond to ensure we are constantly providiong features and services to ensure our artists enjoy continued increase in revenue.</p>
     </div>
 
