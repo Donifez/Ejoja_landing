@@ -55,13 +55,18 @@ class Landing extends Component {
 
     <div className="content-2">
       <img src="/images/5d7929304459f.png" alt="" srcset=""/>
-     
+      <div className="content-info">
+      <h3>Revenue</h3>
       <p>We go above and beyond to ensure we are constantly providiong features and services to ensure our artists enjoy continued increase in revenue.</p>
+      </div>
     </div>
 
       <div className="content-2">
-    <p className="padded-paragraph">Best of all, we own no part of your music so you get to keep 100% of your rights! </p>
-      <img src="/images/vishnu-r-nair-kWCHq48Xwgw-unsplash.png" alt="" srcset=""/>
+        <div className="content-info">
+          <h3>Star Your Show</h3>
+          <p className="padded-paragraph">Best of all, we own no part of your music so you get to keep 100% of your rights! </p>
+        </div>
+       <img src="/images/vishnu-r-nair-kWCHq48Xwgw-unsplash.png" alt="" srcset=""/>
       
     </div>
     <section className="join">
