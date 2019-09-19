@@ -1,3 +1,4 @@
+@import "../../scss/abstracts/mixins";
 .form-general-wrapper{
   width:80%;
   margin:3rem auto ;
@@ -7,6 +8,8 @@
   }
   h2{
     font-size:3.4rem;
+    margin-bottom:0;
+    padding-bottom:0;
   }
   .btn-next{
     background:none;
@@ -20,10 +23,63 @@
     box-sizing:border-box;
     box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.25);
   }
+  .btn-prev{
+    background:none;
+    padding:1rem 2.5rem;
+    border: 2px solid white;
+    color:white;
+    font-size:2rem;
+    cursor:pointer;
+    text-transform:uppercase;
+    box-sizing:border-box;
+    box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.25);
+  }
+  .submit-btn{
+    padding:1rem 2.5rem;
+    border: 2px solid #45F9E5;
+    background:#45f9e5;
+    color:white;
+    font-size:2rem;
+    cursor:pointer;
+    text-transform:uppercase;
+    box-sizing:border-box;
+    float:right;
+    box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.25);
+  }
     .form-container{
+      .progree-bar{
+        width:60%;
+        height:0.6rem;
+        background: #C4C4C4;
+        margin:4rem auto;
+        border-radius: 0.8rem;
+        .progress-1{
+          background: #54DFC5;
+          height: 100%;
+          width:25%;
+          border-radius: 0.8rem;
+        }
+        .progress-2{
+          background: #54DFC5;
+          height: 100%;
+          width:50%;
+        }
+
+        .progress-3{
+          background: #54DFC5;
+          height: 100%;
+          width:75%;
+        }
+        
+      }
     p{
         font-size:1.8rem;
+        margin-top:0.5rem;
       }
+      .platforms-profiles{
+        margin-bottom:1rem;
+      }
+      
       .form-name-container{
         width:100%;
         display:grid;
@@ -32,8 +88,10 @@
         margin:5rem auto;
         font-size: 1.8rem;
         font-family: var(	--font-display-6);
-        
         margin-bottom: 3rem;
+        @include respond(tab-land){
+          grid-template-columns:1fr;
+        }
         input{
           width:100%;
           padding:1rem;
@@ -54,6 +112,25 @@
         font-size: 1.8rem;
         font-family: var(	--font-display-6);
         
+        .role-label{
+          margin-top:3.5rem;
+          margin-bottom:0;
+        }
+        .right-pararagraph{
+          margin:0;
+        }
+        
+        small{
+          font-size:1.3rem;
+        }
+        .profiles-small{
+        font-size:1.4rem;
+        margin-bottom:2rem;
+      }
+        .rights{
+          margin-top:1rem;
+          margin-bottom:3rem;
+        }
         .form-control{
           width:100%;
           padding:1rem;
@@ -72,7 +149,9 @@
           font-size:1.4rem;
          
         }
-
+        .country-select{
+          margin-bottom:1rem;
+        }
         select{
           width:100%;
           padding:1rem;
@@ -82,15 +161,82 @@
           box-sizing: border-box;
           box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.25);
           color:white;
-          margin-top:1.4rem;
-          margin-bottom:1.4rem;
+          margin-top:0;
+          margin-bottom:5rem;
           option{
             color:black;
             font-size:1.8rem;
           }
+          #country{
+            margin-bottom:4rem !important;
+          }
+        }
+        .release-paragraph{
+          margin-bottom:0;
+        }
+        .release-note{
+          margin-top:1rem;
+          margin-bottom:4rem;
         }
       }
+      .third-form-container{
+        width:100%;
+        .agreement{
+          margin-top:4rem;
+          margin-bottom:3rem;
+          .agree-block{
+            width:100%;
+            margin:1rem auto;
+            font-size:1.8rem;
+          }
+        }
 
+        .third-form-control{
+     
+          width:100%;
+          margin:4rem auto;
+          input[type=text]{
+            width:100%;
+            padding:1rem;
+            height:5rem;
+            background: rgba(255, 255, 255, 0.19);
+            border: 1px solid #888282;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.25);
+            color:white;
+            margin-top:1.4rem;
+          }
+          p{
+            margin-bottom:0;
+          }
+          small{
+            font-size:1.4rem;
+            margin-bottom:1rem;
+          }
+          .release-note{
+            
+              margin-top:2rem;
+              font-size:1.8rem;
+              input{
+                margin-right:2rem;
+                height:1.8rem;
+                width:1.8rem;
+              }
+
+              
+          }
+          textarea{
+                width:100%;
+                height: 20rem;
+                background: rgba(196, 196, 196, 0.25);
+                border: 1px solid #DADADA;
+                box-sizing: border-box;
+                color:white;
+                padding:2rem;
+              }
+              
+        }
+      }
 }
 
   

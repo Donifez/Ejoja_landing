@@ -4,13 +4,16 @@ function First(props) {
   return (
     <div className="form-container">
       <h2>Personal Information</h2>
-      <p> To get started you’ll need to provide your details/</p>
+      <p className="tit">  To get started you’ll need to provide your details/</p>
       <form>
+        <div className="progree-bar">
+        <div className="progress-1"></div>
+        </div>
         <div className="form-name-container">
           <div className="form-item-control">
             <label htmlFor="firstname">First Name</label>
             <input
-              className="form-control"
+              className="form-control-country"
               required
               id="firstname"
               name="firstname"
@@ -55,7 +58,7 @@ function First(props) {
           </div>
           <div className="form-item-container">
             <div className="form-item-control">
-              <label htmlFor="role">What is your role ?</label>
+              <p className="role-label">What is your role ?</p>
               <select name="role" className="form-controlt">
                 <option value="select" selected>Please Select one</option>
                 <option value="artist">Artist</option>
