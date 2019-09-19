@@ -66,6 +66,17 @@ function Third(props) {
             <br />
           </div>
         </div>
+        <div className="agreement">
+          <input type="radio" name="refer" value="no" />
+          <p>
+            I agree that if Ejoya accepts my application then the terms and
+            conditions will apply and I acknowledge that by clicking “Submit”, I
+            am 18 years of age or older and I have read and understand the
+            practices in relation to the use and disclosure of personal data as
+            described in Ejoya privacy policy.
+          </p>
+        </div>
+        <input type="button" value="Submit" className="submit-btn" />
       </form>
     </div>
   );

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "../../scss/main.scss";
+import "./form.scss";
 import First from "./first.jsx";
 import Second from "./second.jsx";
-import Third from "./third.jsx"
+import Third from "./third.jsx";
 class MasterForm extends Component {
   constructor(props) {
     super(props);
@@ -13,6 +14,8 @@ class MasterForm extends Component {
       password: ""
     };
   }
+
+
 
   handleChange = event => {
     const { name, value } = event.target;
@@ -61,12 +64,15 @@ class MasterForm extends Component {
     return null;
   }
 
+
+
+
   nextButton() {
     let currentStep = this.state.currentStep;
     if (currentStep < 3) {
       return (
         <button
-          className="btn btn-primary float-right"
+          className="btn-next"
           type="button"
           onClick={this._next}>
           Next
@@ -78,14 +84,9 @@ class MasterForm extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <h1>Promo Request Form</h1>
-        <p>Step {this.state.currentStep} </p>
-
+      <div className="form-general-wrapper">
+        <p className="position">Step {this.state.currentStep} </p>
         <form onSubmit={this.handleSubmit}>
-          {/* 
-        render the form steps and pass required props in
-      */}
           <Step1
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
@@ -104,7 +105,7 @@ class MasterForm extends Component {
           {this.previousButton()}
           {this.nextButton()}
         </form>
-      </React.Fragment>
+      </div>
     );
   }
 }
@@ -126,7 +127,7 @@ function Step2(props) {
   }
   return (
     <div className="form-group">
-      <Second /> 
+      <Second />
     </div>
   );
 }
