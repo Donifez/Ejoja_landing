@@ -65,6 +65,9 @@ body{
           &:hover{
             background: #54DFC5;
           }
+          @include respond(android-phone){
+            padding:1.3rem;
+          }
         }
         
       }
@@ -82,6 +85,7 @@ body{
         width:90%;
         grid-template-columns: 1fr;
         margin:0 auto 2rem auto;
+        height:60vh;
         
       }
         h1{
@@ -102,6 +106,12 @@ body{
             padding:1rem;
             line-height:4.6rem;
             margin-top:1.8rem;
+          }
+          @include respond(android-phone) {
+            font-size:2.7rem;
+            line-height:4rem;
+            width:90%;
+            margin-top:9rem;
           }
         }
         p{
@@ -128,6 +138,7 @@ body{
             font-size:3rem;
           }
           
+          
         }
       .cta-btn{
         border: 1px solid #45F9E5;
@@ -151,9 +162,9 @@ body{
         margin:1rem auto;
         }
         @include respond (android-phone){
-          font-size:1.8rem;
-          padding:2rem 0.5rem;
-          margin:1rem auto;
+          font-size:1.2rem;
+          padding:0.5rem 0.5rem;
+          margin:2rem auto;
         }
       }
     }
@@ -171,8 +182,12 @@ body{
         position:static;
         margin:0 auto;
         display:grid;
+        height:200px;
           grid-template-columns: 1fr;
-          // border:1px solid #45F9E5;
+          border:1px solid #45F9E5;
+      }
+      @include respond (android-phone){
+        margin-top:10rem;
       }
       img{
         width:100%;
@@ -228,14 +243,58 @@ body{
         grid-template-columns: 1fr;
         grid-gap:1.5rem;
         text-align:center;
-        margin-bottom:2rem;
         
       img{
           width:80%;
           margin:0 auto;
+    
         }
       }
+      .content-info{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        margin-top:4rem;
+        margin-bottom:4rem;
+        
+       
+        @include respond (tab-land){
+          display:none;
+        }
+        .fa-icons{
+            color:#45F9E5;
+            font-size:6rem;
+
+        }
+        h3{
+          font-size:2.5rem;
+          margin:1rem auto;
+        }
       
+      }
+      .content-info-mobile{
+        display:none;
+        @include respond(tab-land){
+          display:flex;
+          
+          width:80%;
+          margin:2rem auto;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+          
+        }
+        .fa-icons{
+          color:#45F9E5;
+          font-size:6rem;
+
+      }
+      h3{
+        font-size:2.5rem;
+        margin:1rem auto;
+      }
+      }
       p{
         padding-left:2rem;
         font-family: var (--font-display-6);
@@ -475,9 +534,12 @@ body{
             padding:12px 50px;
             cursor:pointer;
             font-family: Gill Sans MT Pro;
-            font-size: 18px;
+            font-size: 1.8rem;
             line-height: 22px;
             letter-spacing: 0.02em;
+            @include respond(android-phone){
+              font-size:1.4rem;
+            }
           }
         }
         .music-store-right{
