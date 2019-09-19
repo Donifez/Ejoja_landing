@@ -611,6 +611,7 @@ body{
       align-items: center;
       @include respond(tab-land){
         flex-direction:column;
+        margin-top:5rem;
       }
       .newsletter-container{
         display:flex;
@@ -624,7 +625,7 @@ body{
           align-items:center;
         }
         p{
-          font-size: 1.4rem;
+          font-size: 1.8rem;
           text-align:center;
         }
         input{
@@ -638,7 +639,7 @@ body{
           font-size: 16px;
           padding-left:20px;
           @include respond(tab-land){
-            max-width:18rem;
+            max-width:22rem;
 
           }
           @include respond(android-phone){
@@ -678,7 +679,7 @@ body{
 
         li{
           padding-bottom:16px;
-          font-size: 1.1rem;
+          font-size: 1.4rem;
           list-style:none;
           padding-right:1rem;
           
@@ -690,9 +691,13 @@ body{
         width:93%;
         margin:0 auto;
         margin-bottom:20px;
-        font-size:1.5rem;
+        font-size:1.8rem;
+        padding-right:1.5rem; 
         @include respond(tab-land){
           justify-content:center;
+        }
+        .footer-social-icons{
+          padding-right: 1rem;
         }
       }
       .footer-copyright{
@@ -701,6 +706,7 @@ body{
         width:100%;
         p{
           padding-left:50px;
+          font-size:1.5rem;
         }
       }
   }

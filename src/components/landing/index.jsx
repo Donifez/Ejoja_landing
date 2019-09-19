@@ -173,13 +173,13 @@ class Landing extends Component {
       <li>Charts</li>
       </div>
       <div className="footer-social">
-         <FiTwitter/>
-        <FiFacebook/>
+         <FiTwitter className="footer-social-icons"/>
+        <FiFacebook className="footer-social-icons" />
         <FiInstagram />
       </div>
       <div className="footer-copyright">
       <p> <span dangerouslySetInnerHTML={{ "__html": "&copy;" }} />
-Copyright. Ejoya 2019.</p>
+  Copyright. Ejoya 2019.</p>
       </div>
     </footer>
    </div>
