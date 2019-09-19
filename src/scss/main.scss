@@ -184,10 +184,10 @@ body{
         display:grid;
         height:200px;
           grid-template-columns: 1fr;
-          border:1px solid #45F9E5;
+          // border:1px solid #45F9E5;
       }
       @include respond (android-phone){
-        margin-top:10rem;
+        margin-top:15rem;
       }
       img{
         width:100%;
@@ -707,6 +707,10 @@ body{
         p{
           padding-left:50px;
           font-size:1.5rem;
+          text-align:center;
+          span{
+            padding-right:1rem;
+          }
         }
       }
   }
