@@ -1,4 +1,5 @@
 import React from "react";
+import SocialProfiles from "./socialProfile"
 function Third(props) {
   return (
     <div className="form-container">
@@ -9,41 +10,8 @@ function Third(props) {
           <div className="progress-3"></div>
         </div>
         <div className="third-form-container">
-          <div className="third-form-control" >
-          <p className="platforms-profiles">
-            Which of the following profiles do you have ? Select al that apply
-          </p>
-          <small className="profiles-small">
-            Please select at least one and provide links in the fields below
-          </small>
-          <div className="release-note">
-            <input type="checkbox" name="profiles" value="soundcloud" id="" />
-            Soundcloud <br />
-            <input type="checkbox" name="profiles" value="facebook" id="" />
-            Facebook Page <br />
-            <input type="checkbox" name="profiles" value="spotify" id="" />
-            Spotify Artist <br />
-            <input type="checkbox" name="profiles" value="youtube" id="" />
-            Youtube Chanel
-            <br />
-            </div>
-          </div>
-        </div>
-        <div className="third-form-container">
-          <div className="third-form-control">
-            <p>Soundcloud</p>
-            <small>Please copy and paste your Soundcloud link here</small>
-            <input type="text" className="soundcloud" />
-          </div>
-        </div>
-
-        <div className="third-form-container">
-          <div className="third-form-control">
-            <p>Spotify Artist *</p>
-            <small>Please copy and paste your Spotify Artist link here</small>
-            <input type="text" className="soundcloud" />
-          </div>
-        </div>
+          <SocialProfiles />
+         </div>
 
         <div className="third-form-container">
           <div className="third-form-control">
