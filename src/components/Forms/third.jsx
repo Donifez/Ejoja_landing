@@ -55,7 +55,8 @@ function Third(props) {
           </p>
           </div>
         </div>
-        <input type="button" value="Submit" className="submit-btn" />
+        {/* <input type="button" value="Submit" 
+        className="submit-btn" /> */}
       </form>
     </div>
   );
