@@ -7,14 +7,12 @@ body{
   background:black;
   color:white;
   padding:0;
-  margin:0;
-  
+  margin:0;  
   max-width:100%;
   font-family:var (--font-display-6);
   .landing-wrapper{
     width: 100%;
     margin:0 auto;
-   
 
     nav{
       display:grid;
@@ -173,8 +171,9 @@ body{
       grid-template-columns: 1fr 1fr;
       position:relative;
       top:100px;
-      width:100%;
+      width:97%;
       margin:0 auto;
+      padding-left:3rem;
       height:80vh; 
 
       @include respond(tab-land){
@@ -182,6 +181,7 @@ body{
         position:static;
         margin:0 auto;
         display:grid;
+        padding-left:0;
         height:200px;
           grid-template-columns: 1fr;
          //border:1px solid #45F9E5;
@@ -191,14 +191,15 @@ body{
       }
       img{
         width:100%;
+        right:0;
       }
      
       .svg-container{
         position: absolute;
         right:0;
-        border:1px solid #45F9E5;
+        //border:1px solid #45F9E5;
         img{
-          width:90%;
+          width:100%;
           height:100%;
         }
         @include respond(tab-land){
