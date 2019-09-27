@@ -5,6 +5,7 @@ import Landing from "./components/landing"
 import Forms from "./components/Forms";
 import Test from "./components/Forms/test"
 import Faq from "./components/FAQ/faq";
+import Promo from "./components/Promo Request Form/promo_form";
 import {BrowserRouter as Router, Link, Switch, Route } from "react-router-dom"
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
        <Route exact path="/form" component={Forms} />
        <Route exact path="/test" component={Test} />
        <Route exact path="/landing" component={Landing} />
-       <Route exact path="/" component={Faq} />
+       <Route exact path="/faq" component={Faq} />
+       <Route exact path="/" component={Promo} />
 
       </Switch>
    
