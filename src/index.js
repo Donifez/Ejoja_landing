@@ -4,16 +4,25 @@ import "./scss/main.scss";
 import Landing from "./components/landing"
 import Forms from "./components/Forms";
 import Test from "./components/Forms/test"
-import Faq from "./components/FAQ/faq";
 import Promo from "./components/Promo Request Form/promo_form";
+import {Provider} from "react-redux"
+import thunk from 'redux-thunk';
+import reduxLogger from 'redux-logger';
+import reducers from "./reducers"
+import { createStore, applyMiddleware } from 'redux';
+import FAQ from "./components/FAQ/faq";
 import {BrowserRouter as Router, Link, Switch, Route } from "react-router-dom"
+
+
+const store = createStore(reducers, applyMiddleware(reduxLogger, thunk));
+
 
 function App() {
   return (
      <Router>
 
     <div>
-    {/* <nav>
+     <nav>
         <div>
           <Link to="/"><h1>Landing</h1></Link>
         </div>
@@ -21,7 +30,7 @@ function App() {
          <Link to="/form"> <li>Form</li></Link>
          <Link to="/test"> <li>Test</li></Link>
         </ul>
-      </nav> */}
+      </nav> 
 
       <Switch>
        <Route exact path="/form" component={Forms} />
@@ -40,4 +49,8 @@ function App() {
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+<Provider store={store}>
+    <App />
+</Provider>
+, rootElement);
